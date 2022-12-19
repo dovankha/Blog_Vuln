@@ -1,5 +1,6 @@
 <?php
-$connect = mysqli_connect('localhost', 'root', 'password', 'blog') or die('Can not connect database.');
+error_reporting(E_ERROR | E_PARSE);
+$connect = mysqli_connect('localhost', 'root', '', 'blog') or die('Can not connect database.');
 mysqli_set_charset($connect, "utf8");
 session_start();
 ?>
@@ -12,7 +13,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link type="text/css" href="style.css" rel="stylesheet">
-    <title>Nhom 3</title>
+    <title>PISCTF</title>
 </head>
 
 <body>

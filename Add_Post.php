@@ -1,4 +1,4 @@
-<?php $connect = mysqli_connect('localhost', 'root', 'password', 'blog') or die('Can not connect database.');
+<?php $connect = mysqli_connect('localhost', 'root', '', 'blog') or die('Can not connect database.');
 mysqli_set_charset($connect, "utf8");
 session_start();
 if (!isset($_SESSION['username1'])) {
@@ -23,12 +23,12 @@ if (!isset($_SESSION['username1'])) {
         if (empty($_POST["title"])) {
             $titleErr = "Title is required";
         } else {
-            $title = $_POST["title"];
+            $title = htmlspecialchars($_POST["title"]);
         }
         if (empty($_POST["context"])) {
             $context = "";
         } else {
-            $context = $_POST["context"];
+            $context = htmlspecialchars($_POST["context"]);
         }
         $date = date("Y/m/d");
         $sql = "insert into posts(title,context,date) values ('$title','$context','$date')";
@@ -38,12 +38,6 @@ if (!isset($_SESSION['username1'])) {
             echo '<script> alert("Có lỗi trong quá trình xử lý"); location.replace("home.php");</script>';
         }
     }
-    /*function test_input ($data) {
-        $data = trim($data);
-        $data = stripcslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }*/
     ?>
     <form action="Add_Post.php" method="post">
         <table>
