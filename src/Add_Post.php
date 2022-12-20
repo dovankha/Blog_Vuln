@@ -1,4 +1,4 @@
-<?php $connect = mysqli_connect('localhost', 'root', '', 'blog') or die('Can not connect database.');
+<?php $connect = mysqli_connect('db', 'root', 'PTITHCMCTFabcd12345', 'blog') or die('Can not connect database.');
 mysqli_set_charset($connect, "utf8");
 session_start();
 if (!isset($_SESSION['username1'])) {

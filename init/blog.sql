@@ -27,6 +27,10 @@ SET time_zone = "+00:00";
 -- Table structure for table `flag`
 --
 
+CREATE Database blog;
+
+use blog;
+
 CREATE TABLE `flag` (
   `fl4gg` char(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

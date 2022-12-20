@@ -1,6 +1,6 @@
 <?php
 error_reporting(E_ERROR | E_PARSE);
-$connect = mysqli_connect('localhost', 'root', '', 'blog') or die('Can not connect database.');
+$connect = mysqli_connect('db', 'root', 'PTITHCMCTFabcd12345', 'blog') or die('Can not connect database.');
 mysqli_set_charset($connect, "utf8");
 session_start();
 ?>
