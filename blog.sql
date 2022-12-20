@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Sep 16, 2022 at 11:20 AM
--- Server version: 10.3.35-MariaDB
--- PHP Version: 7.2.24
+-- Host: 127.0.0.1
+-- Generation Time: Dec 19, 2022 at 11:29 AM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,15 +28,15 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `flag` (
-  `flag` char(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+  `fl4gg` char(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `flag`
 --
 
-INSERT INTO `flag` (`flag`) VALUES
-('PIS{Th4nk_Y0u_f0r_Pl4y_M1N!G4M3!}');
+INSERT INTO `flag` (`fl4gg`) VALUES
+('ChristCTF{SQLi_1s_3asy_R1ght?}');
 
 -- --------------------------------------------------------
 
@@ -46,8 +46,8 @@ INSERT INTO `flag` (`flag`) VALUES
 
 CREATE TABLE `posts` (
   `id` int(11) NOT NULL,
-  `title` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `context` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `title` text CHARACTER SET utf8 NOT NULL,
+  `context` text CHARACTER SET utf8 NOT NULL,
   `date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -56,12 +56,8 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`id`, `title`, `context`, `date`) VALUES
-(1, 'Test 1', 'Đây là bài viết số 1.', '2022-03-11'),
-(2, 'Test 2', 'Bài viết số 1 thành công nên tôi viết bài số 2', '2022-03-11'),
-(3, 'Vội Vàng - Xuân Diệu', 'Tôi muốn tắt nắng đi\r\nCho màu đừng nhạt mất;\r\nTôi muốn buộc gió lại\r\nCho hương đừng bay đi.\r\n\r\nCủa ong bướm này đây tuần trăng mật;\r\nNày đây hoa của đồng nội xanh rì;\r\nNày đây lá của cành tơ phơ phất;\r\nCủa yến anh này đây khúc tình si.\r\nVà này đây ánh sáng chớp hàng mi;\r\nMỗi sáng sớm, thần vui hằng gõ cửa;\r\nTháng giêng ngon như một cặp môi gần;\r\nTôi sung sướng. Nhưng vội vàng một nửa:\r\nTôi không chờ nắng hạ mới hoài xuân.\r\nXuân đang tới, nghĩa là xuân đang qua,\r\nXuân còn non, nghĩa là xuân sẽ già,\r\nMà xuân hết, nghĩa là tôi cũng mất.\r\nLòng tôi rộng, nhưng lượng trời cứ chật,\r\nKhông cho dài thời trẻ của nhân gian,\r\nNói làm chi rằng xuân vẫn tuần hoàn,\r\nNếu đến nữa không phải rằng gặp lại.\r\nCòn trời đất, nhưng chẳng còn tôi mãi,\r\nNên bâng khuâng tôi tiếc cả đất trời;\r\nMùi tháng, năm đều rớm vị chia phôi,\r\nKhắp sông, núi vẫn than thầm tiễn biệt...\r\nCơn gió xinh thì thào trong lá biếc,\r\nPhải chăng hờn vì nỗi phải bay đi?\r\nChim rộn ràng bỗng đứt tiếng reo thi,\r\nPhải chăng sợ độ phai tàn sắp sửa?\r\nChẳng bao giờ, ôi! Chẳng bao giờ nữa...\r\n\r\nMau đi thôi! Mùa chưa ngả chiều hôm,\r\nTa muốn ôm\r\nCả sự sống mới bắt đầu mơn mởn;\r\nTa muốn riết mây đưa và gió lượn,\r\nTa muốn say cánh bướm với tình yêu,\r\nTa muốn thâu trong một cái hôn nhiều\r\nVà non nước, và cây, và cỏ rạng,\r\nCho chếnh choáng mùi thơm, cho đã đầy ánh sáng\r\nCho no nê thanh sắc của thời tươi;\r\n- Hỡi xuân hồng, ta muốn cắn vào ngươi!', '2022-09-15'),
-(4, 'QUANG VINH ĐÃ THAM GIA', 'HÔM NAY TÔI ĐÃ THAM GIA 1 CUỘC THI HỌC THUẬT THẬT Ý NGHĨA CỦA CÂU LẠC BỘ PIS. NẾU CÁC BẠN THẤY VUI VẺ VÀ BỔ ÍCH, CÁC BẠN HÃY CÙNG THAM GIA NHÉ @#$$%%^&&*()_+789~', '2022-09-16'),
-(5, '<script>alert(\"PIS mai dinh\")</script>', 'ahihi', '2022-09-16'),
-(6, '<script>alert(document.cookie)</script>', 'ahihi', '2022-09-16');
+(1337, 'Vội Vàng - Xuân Diệu', 'Tôi muốn tắt nắng đi\nCho màu đừng nhạt mất;\nTôi muốn buộc gió lại\nCho hương đừng bay đi.\n\nCủa ong bướm này đây tuần trăng mật;\nNày đây hoa của đồng nội xanh rì;\nNày đây lá của cành tơ phơ phất;\nCủa yến anh này đây khúc tình si.\nVà này đây ánh sáng chớp hàng mi;\nMỗi sáng sớm, thần vui hằng gõ cửa;\nTháng giêng ngon như một cặp môi gần;\nTôi sung sướng. Nhưng vội vàng một nửa:\nTôi không chờ nắng hạ mới hoài xuân.\nXuân đang tới, nghĩa là xuân đang qua,\nXuân còn non, nghĩa là xuân sẽ già,\nMà xuân hết, nghĩa là tôi cũng mất.\nLòng tôi rộng, nhưng lượng trời cứ chật,\nKhông cho dài thời trẻ của nhân gian,\nNói làm chi rằng xuân vẫn tuần hoàn,\nNếu đến nữa không phải rằng gặp lại.\nCòn trời đất, nhưng chẳng còn tôi mãi,\nNên bâng khuâng tôi tiếc cả đất trời;\nMùi tháng, năm đều rớm vị chia phôi,\nKhắp sông, núi vẫn than thầm tiễn biệt...\nCơn gió xinh thì thào trong lá biếc,\nPhải chăng hờn vì nỗi phải bay đi?\nChim rộn ràng bỗng đứt tiếng reo thi,\nPhải chăng sợ độ phai tàn sắp sửa?\nChẳng bao giờ, ôi! Chẳng bao giờ nữa...\n\nMau đi thôi! Mùa chưa ngả chiều hôm,\nTa muốn ôm\nCả sự sống mới bắt đầu mơn mởn;\nTa muốn riết mây đưa và gió lượn,\nTa muốn say cánh bướm với tình yêu,\nTa muốn thâu trong một cái hôn nhiều\nVà non nước, và cây, và cỏ rạng,\nCho chếnh choáng mùi thơm, cho đã đầy ánh sáng\nCho no nê thanh sắc của thời tươi;\n- Hỡi xuân hồng, ta muốn cắn vào ngươi!', '2022-12-18'),
+(1338, 'Happy Christmas', 'Merry Christmas! Wishing you all the best this holiday season!', '2022-12-18');
 
 -- --------------------------------------------------------
 
@@ -70,8 +66,8 @@ INSERT INTO `posts` (`id`, `title`, `context`, `date`) VALUES
 --
 
 CREATE TABLE `users` (
-  `username` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `password` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+  `username` text CHARACTER SET utf8 NOT NULL,
+  `password` text CHARACTER SET utf8 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -79,26 +75,18 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`username`, `password`) VALUES
-('vivi', '12345'),
-('thao khung', '12345'),
-('thao ngiu a nam', '1234567'),
-('vivi123', '12345'),
-('<script>alert(\"hackẻ\")</script>', 'abc'),
-('vi', '123abc'),
-('adminn', '111111'),
-('addddddddd', '111111111111111111'),
 ('admin', 'admin'),
-('ad', 'ad'),
-('xinchao', '12345'),
-('info', '12345'),
-('FungoMan', '123123'),
-('thuyvi', 'Vi12345'),
-('BLABLO', '12345'),
-('123121321', 'FRE');
+('xinchao', 'xinchao');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `flag`
+--
+ALTER TABLE `flag`
+  ADD PRIMARY KEY (`fl4gg`);
 
 --
 -- Indexes for table `posts`
@@ -114,7 +102,7 @@ ALTER TABLE `posts`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1339;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

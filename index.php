@@ -1,5 +1,5 @@
 <?php
-$connect = mysqli_connect('localhost', 'root', 'password', 'blog') or die('Can not connect database.');
+$connect = mysqli_connect('localhost', 'root', '', 'blog') or die('Can not connect database.');
 mysqli_set_charset($connect, "utf8");
 session_start();
 ?>
@@ -75,7 +75,7 @@ session_start();
   <form method="post" autocomplete="off" action="#">
     <div class="cont">
       <div class="form sign-in">
-        <h2><b>LET'S HACKING</b></h2>
+        <h2><b>LET'S HACK</b></h2>
         <label>
           <span>Username</span>
           <input type="text" name="username1">
