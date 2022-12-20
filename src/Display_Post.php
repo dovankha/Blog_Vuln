@@ -1,7 +1,7 @@
 <?php 
 error_reporting(E_ERROR | E_PARSE);
-// ini_set("display_errors","off");
-$connect = mysqli_connect('localhost', 'root', '', 'blog') or die ('Can not connect database.');
+ini_set("display_errors","off");
+$connect = mysqli_connect('db', 'root', 'PTITHCMCTFabcd12345', 'blog') or die ('Can not connect database.');
 mysqli_set_charset($connect,"utf8");
 if (isset($_GET["id"]))
 {

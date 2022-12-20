@@ -1,0 +1,20 @@
+version: '3.7'
+services:
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: PTITHCMCTFabcd12345
+    volumes:
+      - ./init/blog.sql:/docker-entrypoint-initdb.d/blog.sql:rw
+  app:
+    build: .
+    links:
+      - db
+    volumes:
+      - ./src:/www:ro
+      - ./config/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./config/supervisor.conf:/etc/supervisord.conf:ro
+      - ./config/fpm.conf:/usr/local/etc/php-fpm.conf:ro
+    ports:
+      - 80:80
+    
